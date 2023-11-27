@@ -1,6 +1,6 @@
 # Project_4
 
-Target
+##Target
 The ones that are going to use this script are people who might be new to this library and working with IFC files. However, it is expected that they are used to working in Python since is anticipated that people can work further with the script and just need an introduction and some examples.
 It is assessed that users need to understand BIM, so for the OpenBIM Modeller part, you need to be at Level 2 since there more likely must be some checks inside the BIM model.
 For the OpenBM Analyst is it important that the person have a further understanding of Level 1 since it might not be enough to be able to make an analysis of the IFC file inside Excel. This tutorial will help people to be confident in Level 2.
@@ -10,7 +10,7 @@ Overall is it assumed that the user understands what BIM is and how you can read
 It must be emphasized that people on Level 1 might still understand this tutorial however, there might be some learning gaps that can be looked into afterwards.
 
 
-Validation of Python script
+##Validation of Python script
 The Python that is developed for this case should work. The last part (working with the windows) is overall correct but in this case, it does not work correctly. The aim of the script was to correct the error for a certain window. As described earlier some external windows are registered as internal which the script should change. Instead of only changing the window that is mentioned in the script (with GlobalId) the script changes all windows to external windows. This error is not acceptable since there can be some internal windows and these windows must not come into the 10% calculation. 
 
 The reason why this is not working is that the property “IsExternal” has the Id 420 which the IFC file has collected to one property for all windows. So, when changing Id 420 for one GlobaldId it changes all Id 420 for the whole model.
